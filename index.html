@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website | Chinmayi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+            <a href="index.html" class="logo">CQuiz</a>
+                <nav class="navbar">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="create.html">Create</a>
+                    <a href="services.html">Services</a>
+                    <a href="login.html">Sign Up</a>
+                </nav>
+
+        </header>
+        <div class="container">
+            <section class="quiz-section">
+                <div class="quiz-box">
+                    <h1>Quiz by Chinmayi</h1>
+                    <div class="quiz-header">
+                        <span> Quiz Website Tutorials</span>
+                        <span class="header-score">Score: 0 /15</span>
+                    </div>  
+                    
+                    <h2 class="question-text"> What does CPU stand for?</h2>
+
+                    <div class="option-list">
+                       <div class="option">
+                            <span>A. Central Process Unit</span>
+                        </div>
+                        <div class="option">
+                            <span>B. Computer Personal Unit</span>
+                        </div>
+                        <div class="option">
+                            <span>C. Central Processor Unit</span>
+                        </div>
+                        <div class="option">
+                            <span>D. Central Peripheral Unit</span>
+                        </div> 
+                    </div>
+
+                    <div class="quiz-footer">
+                        <span class="question-total">1 of 15 Questions</span>
+                        <button class="next-btn">Next</button>
+                    </div>
+                </div>
+
+                <div class="result-box">
+                    <h2>Quiz Result!</h2>
+                    <div class="percentage-container">
+                        <div class="circular-progress">
+                            <span class="progress-value">0%</span>
+                        </div>
+                        <span class="score-text">You Score 0 out of 15</span>
+                    </div>
+
+                    <div class="buttons">
+                        <button class="tryAgain-btn">Try Again</button>
+                        <button class="goHome-btn">Go To Home</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="home">
+                <div class="home-content">
+                    <h1 style="font-size: 40px;">Welcome to CQuiz!</h1>
+                    <br>
+                    <p>Test your knowledge with our diverse range of quiz questions covering various topics in technology, programming, and general knowledge.</p>
+                    <p>Challenge yourself and see how many questions you can answer correctly!</p>
+                        <br>
+                    <button class="start-btn">Start Quiz!</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="popup-info">
+        <h2>Quiz Guide</h2>
+        <span class="info">1. There are 15 questions and no time limit.</span>
+        <span class="info">2. Only one answer is correct for each question.</span>
+        <span class="info">3. Your score is based on the number of correct answers.</span>
+        <span class="info">4. Once you move to the next question, you cannot go back.</span>
+        <span class="info">5. After completing the quiz, view your results to see how well you performed.</span>
+    
+        <div class="btn-group">
+            <button class="info-btn exit-btn">Exit Quiz</button>
+            <a href="#" class="info-btn continue-btn">Continue</a>
+        </div>
+    </div>
+    
+    
+    
+    <script src="questions1.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website | Chinmayi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins');
+        
+        .navigation .btnLogin-popup {
+            width: 130px;
+            height: 50px;
+            background: transparent;
+            border: 2px solid #fff;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            color: #950170;
+            font-weight: 800;
+            margin-left: 20px;
+            margin-right: 120px;
+            margin-top: 1px;
+            transition: 0.5s;
+        }
+
+        .navigation .btnLogin-popup:hover {
+            background: #fff;
+            color: #950170;
+            font-weight: 800;
+        }
+
+        .wrapper {
+            position: fixed;
+            top: 30%;
+            left: 35%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: auto;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transform-origin: center;
+            transform: scale(0);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .wrapper.active-popup {
+            transform: scale(1);
+        }
+
+        .wrapper .active {
+            height: 520px;
+        }
+
+        .wrapper .form-box {
+            width: 100%;
+            padding: 40px;
+            transition: transform 0.3s ease;
+            background-color: #950170; 
+            border-radius: 15px; 
+        }
+
+
+        .wrapper .form-box.login {
+            transition: transform 0.18s ease;
+            transform: translateX(0);
+        }
+
+        .wrapper .active .form-box.login {
+            transition: none;
+            transform: translateX(0); 
+        }
+
+        .wrapper .icon-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45px;
+            height: 45px;
+            background: #d4ced245;
+            font-size: 2em;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom-left-radius: 20px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .form-box h2 {
+            font-size: 2em;
+            color: #fff;
+            text-align: center;
+        }
+
+        .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            border-bottom: 2px solid #fff;
+            margin: 30px 0;
+        }
+
+        .input-box.checkbox {
+            border-bottom: none;
+        }
+
+        .input-box label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-size: 1em;
+            color: #fff;
+            font-weight: 500;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .input-box input:focus~label,
+        .input-box input:valid~label {
+            top: 0.5px;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            color: #fff;
+            font-weight: 600;
+            padding: 0 35px 0 5px;
+        }
+
+        .input-box .icon {
+            position: absolute;
+            right: 8px;
+            font-size: 1.2em;
+            color: #fff;
+            line-height: 57px;
+        }
+
+        .remember-forgot {
+            font-size: 0.9em;
+            color: #fff;
+            font-weight: 500;
+            margin: -15px 0 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .remember-forgot label input {
+            accent-color: #fff;
+            margin-right: 3px;
+        }
+
+        .remember-forgot a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            width: 100%;
+            height: 45px;
+            background: none;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            color: #fff;
+            font-weight: 800;
+        }
+
+        .login-register {
+            font-size: .9em;
+            color: #fff;
+            text-align: center;
+            font-weight: 500;
+            margin: 25px 0 10px;
+        }
+
+        .login-register p a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-register p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+            <a href="index.html" class="logo">CQuiz</a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="create.html">Create</a>
+                <a href="services.html">Services</a>
+                <a href="login.html" class="login-link active">Sign Up</a>
+            </nav>
+        </header>
+
+        <section class="services">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+             <h1>Unlock the World of Knowledge!</h1>
+             <h2>Join our vibrant community and embark on a journey of curiosity and learning.</h2>
+            <h2> Sign up now to access a world of quizzes and challenges designed to spark your intellect.</h2>
+             
+            <br>
+            <button class="btnLogin-popup">Sign Up</button>
+        </section>  
+
+        <div class="wrapper">
+            <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+    
+            <div class="form-box login">
+                <h2> Quiz Away! </h2>
+                <form>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required>
+                        <label> Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock"></ion-icon></span>
+                        <input type="password" required>
+                        <label> Password</label>
+                    </div>
+                    <div class="remember-forget">
+                        <label><input type="checkbox"> Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+            </div>
+            
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const contentSection = document.querySelector('.services');
+                const wrapper = document.querySelector('.wrapper');
+                const loginLink = document.querySelector('.login-link');
+                const btnPopup = document.querySelector('.btnLogin-popup');
+                const formBoxLogin = document.querySelector('.form-box.login');
+                const iconClose = document.querySelector('.icon-close');
+        
+                formBoxLogin.style.transform = 'translateX(400px)';
+        
+                contentSection.style.display = 'block';
+                wrapper.classList.remove('active-popup');
+        
+                function showLoginForm() {
+                    wrapper.classList.add('active-popup');
+                    formBoxLogin.style.transform = 'translateX(0)';
+                    contentSection.style.display = 'none';
+                }
+        
+                function closeForms() {
+                    wrapper.classList.remove('active-popup');
+                    formBoxLogin.style.transform = 'translateX(400px)';
+                    contentSection.style.display = 'block';
+                }
+        
+                loginLink.addEventListener('click', showLoginForm);
+                btnPopup.addEventListener('click', showLoginForm);
+                iconClose.addEventListener('click', closeForms);
+            });
+        </script>
+        
+    </main>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+
+</html>
